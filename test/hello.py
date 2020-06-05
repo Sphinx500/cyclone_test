@@ -9,7 +9,7 @@ from twisted.python import log
 class MainHandler(cyclone.web.RequestHandler):
     def get(self):
       #Escribe el mensaje a pantalla
-        self.write("Hello, world")
+        self.write('<h2 style="text-align: center;">HELLO WORLD</h2>')
 
 #define la aplicacion de cyclone, pasando la
 #ruta, junto con el metodo HTTP
