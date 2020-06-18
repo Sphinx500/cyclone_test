@@ -9,8 +9,17 @@ from twisted.python import log
 class MainHandler(cyclone.web.RequestHandler):
     def get(self):
       #Escribe el mensaje a pantalla
-        self.write('<h2 style="text-align: center;">HELLO WORLD</h2>''<br><br><p style="text-align: center; font-family: verdana; color: purple;">HOLA, MI NOMBRE ES FERNANDO.</p>')
-
+      #importar Bootstrap
+        boot='<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">'
+        header=self.write('<h2 style="text-align: center;">HELLO WORLD</h2>''<br><br>')
+        footer=self.write('<p style="text-align: center; font-family: verdana; color: purple;">HOLA, MI NOMBRE ES FERNANDO.</p>')
+        #variable cualquiera para cada componente
+        button=self.write('<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous"><button type="button" class="btn btn-warning">Warning</button>')
+        #regresar cada uno de los componentes
+        return(boot)
+        return(header)
+        return(footer)
+        return(button)
 #define la aplicacion de cyclone, pasando la
 #ruta, junto con el metodo HTTP
 if __name__ == "__main__":
