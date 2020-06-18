@@ -11,14 +11,14 @@ class MainHandler(cyclone.web.RequestHandler):
       #Escribe el mensaje a pantalla
       #importar Bootstrap
         boot='<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">'
-        header=self.write('<h2 style="text-align: center;">HELLO WORLD</h2>''<br><br>')
-        footer=self.write('<p style="text-align: center; font-family: verdana; color: purple;">HOLA, MI NOMBRE ES FERNANDO.</p>')
+        header=self.write('<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous"><h1 class="text-light bg-dark">MI PRIMER FORMULARIO</h1>')
+        body=self.write('<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous"><form><div class="form-group"><label for="exampleFormControlInput1">MATRICULA</label><input type="number" class="form-control" id="ControlInput1" placeholder="17180000"></div><div class="form-group"><label for="exampleFormControlInput1">NOMBRE</label><input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Juan"></div><div class="form-group"><label for="exampleFormControlInput1">PRIMER APELLIDO</label><input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Perez"></div><div class="form-group"><label for="exampleFormControlInput1">SEGUNDO APELLIDO</label><input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Gonzalez"></div><div class="form-group"><label for="exampleFormControlInput1">EDAD</label><input type="number" class="form-control" id="exampleFormControlInput1" placeholder="18"></div><div class="form-group"><label for="exampleFormControlInput1">FECHA DE NACIMIENTO</label><input type="date" class="form-control" id="exampleFormControlInput1" placeholder=""></div><div><select class="form-control form-control"><option>Hombre</option><option>Mujer</option><option>Otro</option></select></div> <div><label for="validationDefault04">Estado</label><select class="custom-select" id="validationDefault04" required><option selected disabled value="">Choose...</option><option>...</option></select></div><br><br>')
         #variable cualquiera para cada componente
-        button=self.write('<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous"><button type="button" class="btn btn-warning">Warning</button>')
+        button=self.write('<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous"><button type="button" class="btn btn-warning">ENVIAR</button>')
         #regresar cada uno de los componentes
         return(boot)
         return(header)
-        return(footer)
+        return(body)
         return(button)
 #define la aplicacion de cyclone, pasando la
 #ruta, junto con el metodo HTTP
